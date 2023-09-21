@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yazılım Mektebi | Kitap Mağazası</title>
+  <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./assets/toastr/toastr.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+
+  <nav class="navbar">
+    <h2 class="title">bookshop</h2>
+    <ul class="menu">
+      <li class="active">Books</li>
+      <li>AUDIBOOKS</li>
+      <li>GİFTS</li>
+      <li>ABOUT</li>
+    </ul>
+    <ul clas="menu_icons">
+      <li><i class="bi bi-person"></i></li>
+      <li><i class="bi bi-search"></i></li>
+      <li class="basket_icon" onclick="toggleModal()">
+        <i class="bi bi-bag">
+          <span class="basket_count"></span>
+        </i>
+      </li>
+    </ul>
+  </nav>
+  <section class="slider">
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./assets/images/slide1.png" class="d-block w-100" alt="onlile schol">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/images/slide2.png" class="d-block w-100" alt="Çocuk Kitap günü">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/images/slide3.png" class="d-block w-100" alt="Sevgililer günü">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+  <section class="store my-5">
+    <div class="filter_background"></div>
+    <ul class="filter">
+      <li class="active">tümü</li>
+      <li>roman</li>
+      <li>fantastik</li>
+      <li>kişisel gelişim</li>
+    </ul>
+    <div class="row book_list"></div>
+  </section>
+  <div class="basket_modal">
+    <div class="basket_item">
+      <i class="bi bi-x" onclick="toggleModal()"></i>
+      <h2 class="basket_title">your items</h2>
+      <ul class="basket_list">
+        <li class="basket_item">No item to Buy again.</li>
+      </ul>
+      <div class="basket_total" >
+        <span class="fw-bold mb-3 fs-4 total_price"></span>
+        <button class="btn_purple"> checkout</button>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./assets/jquery/jquery.min.js"></script>
+  <script  src="./assets/toastr/toastr.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
